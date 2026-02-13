@@ -5,10 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UrbanPulse Gym</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="top"></div>
+    <header class="header">
+  <div class="nav-container">
+    <a href="#top" class="logo">
+  <span class="logo-icon">
+    <!-- Dumbbell SVG -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 10v4M6 8v8M18 8v8M22 10v4M6 12h12"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <span class="logo-text">UrbanPulse</span>
+</a>
 
-  <h1>UrbanPulse Gym</h1>
+    <nav class="nav">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Programs</a></li>
+        <li><a href="#">Trainers</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+      ☰
+    </button>
+  </div>
+</header>
+<section class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>UrbanPulse Gym</h1>
+    <h2>Where training becomes lifestyle</h2>
+    <p>Functional training, personal coaching, and group sessions in a motivating, urban gym environment — designed for people who want more than just a workout.</p>
+    <a href="#" class="hero-cta">Get Started</a>
+  </div>
+</section>
+
+<script>
+  const toggleButton = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggleButton.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
 </body>
 </html>
