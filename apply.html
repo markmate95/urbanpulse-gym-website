@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrbanPulse Gym</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="apply.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="top"></div>
+    <header class="header">
+  <div class="nav-container">
+    <a href="#top" class="logo">
+  <span class="logo-icon">
+    <!-- Dumbbell SVG -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 10v4M6 8v8M18 8v8M22 10v4M6 12h12"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <span class="logo-text">UrbanPulse</span>
+</a>
+
+      <nav class="nav">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#programs">Programs</a></li>
+          <li><a href="index.html#trainers">Trainers</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- APPLY HERO -->
+  <section class="apply-hero">
+  <div class="apply-hero-grid">
+
+    <!-- TEXT SIDE -->
+    <div class="apply-hero-content">
+      <h1>Apply for Personal Coaching</h1>
+      <p>
+        Personalized 1-on-1 training for individuals who are serious about results.
+      </p>
+    </div>
+
+    <!-- IMAGE SIDE -->
+    <div class="apply-hero-image">
+      <img src="assets/apply-hero-coaching.png" alt="Personal coaching session">
+    </div>
+
+  </div>
+</section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="apply-criteria">
+    <div class="apply-container criteria-grid">
+
+      <div class="criteria-block">
+        <h3>This coaching is for you if:</h3>
+        <ul>
+          <li>You want a fully personalized training plan</li>
+          <li>You value structure, technique, and progression</li>
+          <li>You are committed to consistent training</li>
+          <li>You want long-term results, not quick fixes</li>
+        </ul>
+      </div>
+
+      <div class="criteria-block">
+        <h3>This coaching is NOT for you if:</h3>
+        <ul>
+          <li>You’re looking for random workouts</li>
+          <li>You want instant results without consistency</li>
+          <li>You’re not ready to commit to the process</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <section class="apply-form-section">
+    <div class="apply-container">
+
+      <h2>Application Form</h2>
+
+      <form class="apply-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="goal">Primary Goal</label>
+          <select id="goal" name="goal" required>
+            <option value="">Select a goal</option>
+            <option>Fat loss</option>
+            <option>Strength</option>
+            <option>Performance</option>
+            <option>Mobility</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Training Experience</label>
+          <select id="experience" name="experience" required>
+            <option value="">Select level</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Short Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Tell us briefly what you want to achieve."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-outline">
+          Submit Application
+        </button>
+      </form>
+
+      <p class="apply-note">
+        Applications are reviewed personally.  
+        If selected, you’ll be contacted within 48 hours.
+      </p>
+
+    </div>
+  </section>
+
+  <footer class="apply-footer">
+    <p>© UrbanPulse Gym</p>
+    <a href="index.html">Back to Home</a>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggleButton.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+</body>

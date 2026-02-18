@@ -1,0 +1,296 @@
+/* =====================
+   APPLY PAGE
+===================== */
+
+/* Shared container */
+.apply-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  background: black;
+  padding: 25px 25px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+.logo-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.logo-text {
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+/* =====================
+   APPLY HERO (SPLIT)
+===================== */
+
+.apply-hero {
+  background: #000;
+  padding: 140px 20px 100px;
+}
+
+.apply-hero-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* TEXT */
+.apply-hero-content h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.apply-hero-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.75;
+  max-width: 520px;
+  color: #fff;
+}
+
+/* IMAGE */
+.apply-hero-image {
+  position: relative;
+  overflow: hidden;
+  height: 420px;
+}
+
+.apply-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* BLACK OVERLAY – main site style */
+.apply-hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,0.2) 30%,
+    rgba(0,0,0,0.7) 75%,
+    rgba(0,0,0,1) 100%
+  );
+}
+
+@media (max-width: 900px) {
+  .apply-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .apply-hero-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .apply-hero {
+    padding: 120px 20px 80px;
+  }
+
+  .apply-hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .apply-hero-image {
+    height: 240px;
+  }
+}
+
+/* =====================
+   CRITERIA
+===================== */
+
+.apply-criteria {
+  padding: 50px 20px;
+  background: #000;
+}
+
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+}
+
+.criteria-block h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.criteria-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.criteria-block li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.75;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* =====================
+   FORM SECTION
+===================== */
+
+.apply-form-section {
+  padding: 50px 20px;
+  background: #000;
+}
+
+.apply-form-section h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* Form layout */
+.apply-form {
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+/* Inputs */
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding: 10px 0;
+  font-size: 0.95rem;
+  color: #fff;
+  outline: none;
+}
+
+.apply-form input::placeholder,
+.apply-form textarea::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.apply-form input:focus,
+.apply-form select:focus,
+.apply-form textarea:focus {
+  border-color: #fff;
+}
+
+/* Select fix */
+.apply-form select {
+  appearance: none;
+  cursor: pointer;
+}
+
+/* CTA spacing */
+.apply-form .btn-outline {
+  margin-top: 24px;
+}
+
+/* Note */
+.apply-note {
+  margin-top: 32px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  max-width: 520px;
+  color: #fff;
+}
+
+/* =====================
+   FOOTER (LIGHT)
+===================== */
+
+.apply-footer {
+  padding: 40px 20px;
+  background: #000;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.apply-footer a {
+  display: block;
+  margin-top: 8px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 900px) {
+  .criteria-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .apply-hero {
+    padding: 120px 20px 80px;
+  }
+
+  .apply-criteria,
+  .apply-form-section {
+    padding: 80px 20px;
+  }
+
+  .apply-hero h1 {
+    font-size: 1.9rem;
+  }
+}

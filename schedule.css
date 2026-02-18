@@ -1,0 +1,191 @@
+/* =====================
+   SCHEDULE PAGE
+===================== */
+
+.schedule-hero {
+  background: #000;
+  padding: 140px 20px 80px;
+}
+
+.schedule-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.schedule-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.schedule-hero p {
+  color: rgba(255,255,255,0.75);
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* GRID */
+.schedule-section {
+  padding: 80px 20px 120px;
+  background: #000;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.schedule-day h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.schedule-day ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-day li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.schedule-day li span {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* CTA */
+.schedule-cta {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.btn-outline {
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  transform: translateY(-1px);
+}
+
+/* ===== Calendar Modal ===== */
+
+.calendar-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.calendar-modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.calendar-modal-content {
+  background: #0f0f0f;
+  border-radius: 16px;
+  padding: 24px;
+  width: 90%;
+  max-width: 420px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.calendar-modal-content h2 {
+  margin-bottom: 8px;
+}
+
+.calendar-modal-content p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.calendar-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.calendar-placeholder {
+  border: 1px dashed rgba(111, 88, 88, 0.2);
+  padding: 40px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.calendar-input {
+  display: none;
+}
+
+/* ===== Flatpickr tuning ===== */
+
+.flatpickr-calendar {
+  background: #141414;
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+.flatpickr-months {
+  background: #141414;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.flatpickr-weekdays {
+  background: #141414;
+}
+
+.flatpickr-day {
+  color: rgba(255,255,255,0.75);
+}
+
+.flatpickr-day:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.flatpickr-day.today {
+  border-color: #fff;
+}
+
+.flatpickr-day.selected {
+  background: #fff;
+  color: #000;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-hero {
+    padding: 120px 20px 60px;
+  }
+}

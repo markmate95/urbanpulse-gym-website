@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule – UrbanPulse Gym</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+
+  <!-- Page specific -->
+  <link rel="stylesheet" href="schedule.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER (ugyanaz, mint index/apply) -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">
+          <!-- dumbbell svg -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M2 10v4M6 8v8M18 8v8M22 10v4M6 12h12"
+              stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="logo-text">UrbanPulse</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="schedule-hero">
+    <div class="schedule-container">
+      <h1>Weekly Schedule</h1>
+      <p>
+        Explore our training sessions and find the right time for your performance goals.
+      </p>
+    </div>
+  </section>
+
+  <!-- SCHEDULE GRID -->
+  <section class="schedule-section">
+    <div class="schedule-container">
+
+      <div class="schedule-grid">
+
+        <!-- DAY -->
+        <div class="schedule-day">
+          <h3>Monday</h3>
+          <ul>
+            <li><span>07:00</span> Functional Strength</li>
+            <li><span>12:00</span> Urban Conditioning</li>
+            <li><span>18:00</span> Small Group Training</li>
+          </ul>
+        </div>
+
+        <div class="schedule-day">
+          <h3>Wednesday</h3>
+          <ul>
+            <li><span>07:00</span> Mobility & Core</li>
+            <li><span>17:00</span> Functional Strength</li>
+            <li><span>19:00</span> Urban Conditioning</li>
+          </ul>
+        </div>
+
+        <div class="schedule-day">
+          <h3>Friday</h3>
+          <ul>
+            <li><span>08:00</span> Strength Technique</li>
+            <li><span>16:00</span> Conditioning</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="schedule-cta">
+  <button class="btn-outline" id="openCalendar">
+    Book Your First Session
+  </button>
+</div>
+
+    </div>
+    <!-- Calendar Modal -->
+<div class="calendar-modal" id="calendarModal">
+  <div class="calendar-modal-content">
+
+    <button class="calendar-close">&times;</button>
+
+    <h2>Book a Session</h2>
+    <p>Select your preferred date</p>
+
+    <!-- ide jön majd a naptár -->
+    <input type="text" id="calendar" class="calendar-input" placeholder="Select a date">
+
+  </div>
+</div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  const openBtn = document.getElementById("openCalendar");
+  const modal = document.getElementById("calendarModal");
+  const closeBtn = document.querySelector(".calendar-close");
+
+  openBtn.addEventListener("click", () => {
+    modal.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+  flatpickr("#calendar", {
+  inline: true,
+  minDate: "today"
+});
+</script>
+</body>
+</html>

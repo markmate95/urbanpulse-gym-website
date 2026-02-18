@@ -1,0 +1,168 @@
+/* GLOBAL FIX */
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* HERO */
+
+.transformation-hero {
+  padding: 160px 20px 120px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #000;
+}
+
+/* =========================
+   TRANSFORMATION HERO BG
+   ========================= */
+
+.transformation-hero.with-bg {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  background-image: url("assets/transformation-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.transformation-hero.with-bg .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.60),
+    rgba(0,0,0,0.70)
+  );
+  z-index: 1;
+}
+
+.transformation-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 160px 20px 120px;
+}
+
+.transformation-hero .eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  opacity: 0.6;
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(255,255,255,0.6);
+}
+
+.transformation-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 24px;
+  color: white;
+}
+
+.transformation-hero p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.85;
+  margin-bottom: 40px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* SECTIONS */
+.transformation-section {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.transformation-section h2 {
+  font-size: 2rem;
+  margin-bottom: 48px;
+}
+
+/* GRID */
+.transformation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.transformation-card {
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 32px;
+}
+
+.transformation-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.transformation-card p {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* SPLIT */
+.transformation-section.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.transformation-section ul {
+  margin-top: 16px;
+}
+
+.transformation-section li {
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+
+/* CTA */
+.transformation-cta {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.transformation-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.transformation-cta p {
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+.btn-outline.large {
+  padding: 18px 48px;
+  font-size: 0.8rem;
+}
+
+/* =========================
+   TRANSFORMATION HERO – MOBILE FIX
+   ========================= */
+
+@media (max-width: 768px) {
+  .transformation-hero.with-bg {
+    background-image: url("assets/transformation-hero-mobile.png");
+    background-position: 80% center;
+    min-height: 75vh;
+  }
+
+  .transformation-hero-content {
+    padding: 140px 20px 90px;
+  }
+
+  .transformation-hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .transformation-hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+}
