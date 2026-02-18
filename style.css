@@ -569,10 +569,13 @@ body {
 }
 
 .section-header h2 {
-  font-size: 2rem;
+  padding: 0 5px;
   font-weight: 600;
-  color: #fff;
-  margin-bottom: 12px;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
 }
 
 .section-subtitle {
@@ -682,27 +685,36 @@ body {
 }
 
 .contact {
-  padding: 100px 0;
+  padding: 100px 20px;
   background: #000;
   color: #fff;
 }
 
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
 .contact .section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  padding: 0 5px;
+  font-weight: 600;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
 }
 
 .contact .section-subtitle {
-  text-align: center;
   color: #aaa;
-  max-width: 600px;
-  margin: 0 auto 50px;
+  max-width: 500px;
+  margin-bottom: 50px;
 }
 
 .contact-form {
   max-width: 600px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -734,14 +746,43 @@ body {
   color: #000;
   border: none;
   padding: 14px;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
+  border-radius: 4px;
+  text-transform: uppercase;
 }
 
 .btn-primary:hover {
   background: #626060;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .contact .section-header {
+    margin-bottom: 32px;
+  }
+
+  .contact .section-subtitle {
+    margin-bottom: 24px;
+  }
+
+  .contact-container {
+    gap: 32px;
+  }
+
 }
 
 .footer {
